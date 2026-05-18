@@ -1,0 +1,39 @@
+.collection-page h2 { font-size: 1.4rem; margin-bottom: 1.25rem; }
+
+.search-bar { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+.search-bar input { flex: 1; }
+
+.search-results { margin-bottom: 2rem; }
+.search-status { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.card-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-tile img { width: 100%; display: block; }
+
+.card-tile-info {
+  padding: 0.5rem 0.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-tile-info span { font-size: 0.8rem; font-weight: 600; }
+.card-tile-info small { font-size: 0.7rem; color: var(--text-muted); }
+.card-tile button { margin: 0.5rem 0.6rem 0.6rem; font-size: 0.75rem; }
+
+.collection-section h3 { font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-muted); }
+.empty-state { color: var(--text-muted); font-size: 0.875rem; padding: 1rem 0; }

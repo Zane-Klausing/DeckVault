@@ -1,0 +1,92 @@
+.decks-page h2 { font-size: 1.4rem; margin-bottom: 1.25rem; }
+
+.decks-layout { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start; }
+
+.deck-list-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+.deck-list-panel h3 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+.deck-list { list-style: none; display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; }
+
+/* Button resets included so this rule works when the element is a <button>
+   (as changed by the javascript-engineer) rather than an <li> */
+.deck-list-item {
+  width: 100%;
+  text-align: left;
+  background: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: var(--text);
+  display: block;
+}
+
+.deck-list-item:hover { background: var(--border); }
+.deck-list-item.active { border-color: var(--gold); color: var(--gold); }
+
+.deck-list-item small { display: block; font-size: 0.75rem; color: var(--text-muted); }
+
+.deck-list-row { display: flex; align-items: center; gap: 0.25rem; }
+.deck-list-row .deck-list-item { flex: 1; }
+
+.deck-delete-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.deck-delete-btn:hover { color: #e05244; background: var(--border); }
+
+.deck-card-remove {
+  display: block;
+  width: calc(100% - 0.6rem);
+  margin: 0.3rem auto 0;
+  font-size: 0.7rem;
+  padding: 0.2rem 0;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deck-card-remove:hover { border-color: #e05244; color: #e05244; }
+
+.create-form { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+.create-form input, .create-form select { width: 100%; }
+.create-form-actions { display: flex; gap: 0.5rem; }
+
+.deck-detail-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; }
+
+.deck-detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+.deck-detail-header h3 { font-size: 1.1rem; }
+.deck-detail-header small { font-size: 0.8rem; color: var(--text-muted); }
+
+.deck-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.deck-card-tile { text-align: center; }
+.deck-card-tile img { width: 100%; border-radius: 4px; }
+.deck-card-tile p { font-size: 0.75rem; margin-top: 0.3rem; }
+.deck-card-tile small { font-size: 0.7rem; color: var(--text-muted); }
+
+.add-card-form { display: flex; gap: 0.5rem; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+.add-card-form select { flex: 1; }
+.add-card-form input[type="number"] { width: 70px; }
+
+.empty-state { color: var(--text-muted); font-size: 0.875rem; padding: 0.5rem 0; }
+
+@media (max-width: 700px) {
+  .decks-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2e3248;
+  --gold: #c9a84c;
+  --gold-hover: #e0bf6e;
+  --text: #e8e8e8;
+  --text-muted: #9da1bc;
+  --danger: #c0392b;
+  --danger-hover: #e74c3c;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  transition: background 0.15s, color 0.15s;
+}
+
+button:hover { background: var(--border); }
+
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+button.primary {
+  background: var(--gold);
+  color: #0f1117;
+  border-color: var(--gold);
+  font-weight: 600;
+}
+
+button.primary:hover { background: var(--gold-hover); }
+
+button.danger { border-color: var(--danger); color: #e05244; }
+button.danger:hover { background: var(--danger); color: #fff; }
+
+input, select {
+  font-family: inherit;
+  font-size: 0.875rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.4rem 0.7rem;
+}
+
+input:focus, select:focus { outline: 2px solid var(--gold); outline-offset: -1px; }
+
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); }
+th { color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+tr:hover td { background: var(--surface); }
+
+/* Visually hidden — available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

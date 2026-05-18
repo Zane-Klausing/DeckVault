@@ -1,0 +1,25 @@
+# .NET build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# EF Core sensitive migration leftovers
+appsettings.Production.json
+appsettings.Local.json
+
+# Node / Vite
+node_modules/
+dist/
+
+# Environment / secrets
+.env
+.env.local
+.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
